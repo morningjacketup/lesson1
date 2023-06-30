@@ -1,0 +1,54 @@
+.container {
+	max-width: 100%;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+#slider {
+	width: 500px;
+	height: 300px;
+	overflow: hidden;
+}
+
+.slide {
+	width: 100%;
+	height: 100%;
+	display: none;
+	font-size: 50px;
+}
+
+.modal {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 500px;
+	height: 500px;
+	background-color: #fff;
+	color: brown;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 50px;
+	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+	transform: translate(-50%, -50%) scale(0.8);
+	visibility: hidden;
+	transition: all 0.2s linear;
+}
+
+.modal.visible {
+	visibility: visible;
+	opacity: 1;
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-btn {
+	background-color: brown;
+	color: #fff;
+	font-weight: 500;
+	border-radius: 20px;
+	margin: 50px auto;
+	display: block;
+	height: 50px;
+	width: 150px;
+	border: none;
+}
