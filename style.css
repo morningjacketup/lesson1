@@ -1,7 +1,12 @@
+.body {
+	background-color: aqua;
+}
+
 .container {
 	max-width: 100%;
 	padding-left: 100px;
 	padding-right: 100px;
+	height: 500px;
 }
 #slider {
 	width: 500px;
@@ -21,7 +26,7 @@
 	left: 50%;
 	top: 50%;
 	width: 500px;
-	height: 500px;
+	height: 300px;
 	background-color: #fff;
 	color: brown;
 	text-align: center;

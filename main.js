@@ -43,19 +43,22 @@ document.getElementById('nextBtn').addEventListener('click', nextSlide);
 document.getElementById('prevBtn').addEventListener('click', prevSlide);
 
 
-const modal = document.querySelector('.modal'),
-  modalButton = document.querySelector('.modal-btn')
-closeBtn = document.querySelector('.close-btn')
+const modal = document.querySelector('.modal')
+const modalButton = document.querySelector('.modal-btn')
+const closeBtn = document.querySelector('.close-btn')
+const overlay = document.querySelector('.container')
 
 modalButton.addEventListener('click', () => {
-  modal.classList.toggle('visible');
-})
+  modal.classList.add('visible');
+});
 
 closeBtn.addEventListener('click', () => {
-  modal.classList.remove('visible')
-})
+  modal.classList.remove('visible');
+});
 
-document.body.addEventListener('click', () => {
-  if (modal)
-    modal.classList.remove('visible')
-})
+overlay.addEventListener('click', (event) => {
+  if (event.target !== overlay) {
+    return;
+  }
+  modal.classList.remove('visible');
+});
